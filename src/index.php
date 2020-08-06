@@ -83,6 +83,55 @@
       </div>
     </div>
 
+    <!-- SECTION WITH TASKS EDITING -->
+    <section class="section-content" id="section-edit-tasks">
+      <div class="w-25 pt-3">
+        <form id="editTaskForm">
+          <input type="text" class="form-control" id="editTaskID" name="editTaskID" hidden>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Name</div>
+            </div>
+            <input type="text" class="form-control" id="editTaskName" name="editTaskName" placeholder="Name" required>
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Performer</div>
+            </div>
+            <div id="editPerformerOptions" class="d-flex flex-grow-1">
+              <select type="text" class="form-control" id="editTaskPerformer" name="editTaskPerformer">
+              <?php include('php/getPerformersOptions.php') ?>
+            </div>
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Status</div>
+            </div>
+            <select type="text" class="form-control" id="editTaskStatus" name="editTaskStatus">
+              <?php include('php/getStatusesOptions.php') ?>
+            </select>
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Description</div>
+            </div>
+            <textarea wrap="soft" class="form-control" id="editTaskDescription" name="editTaskDescription" style="resize: none; height: 15rem;" placeholder="Description" required></textarea>
+          </div>
+          <div class="d-flex justify-content-between">
+            <input type="submit" form="editTaskForm" value="Save" class="btn btn-sm btn-success w-25" id="submitEditTask">
+            <button type="button" class="btn btn-sm btn-danger w-25" onclick="CancelAdding('editTaskForm', 'section-tasks')">Close</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section-content" id="section-completed">
+      <div class="w-50 p-5">
+        <h1>Operation is completed</h1>
+        <button type="button" class="btn btn-sm btn-secondary w-25" onclick="CancelAdding()">Back</button>
+      </div>
+    </section>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
