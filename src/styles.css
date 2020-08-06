@@ -1,4 +1,24 @@
 .section-navbar {
   padding: 5rem 5rem 0 5rem;
 }
+
+.section-content {
+  padding: 0 5rem;
+  display: none;
+}
+
+.table-wrapper {
+  display: block;
+}
+
+.scrollable {
+  position: relative;
+  height: 30vh;
+  overflow: auto;
+}
+
+.add-button {
+  margin-top: 1.5rem;
+  float: right;
+}
 /*# sourceMappingURL=styles.css.map */
