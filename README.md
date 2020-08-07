@@ -1,1 +1,2 @@
-# Simple task manager
+# Task manager
+This is simple task manager.
